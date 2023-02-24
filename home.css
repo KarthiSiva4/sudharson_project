@@ -1,0 +1,191 @@
+body {
+    background-color: rgb(244, 245, 247);
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(https://images.pexels.com/photos/1384898/pexels-photo-1384898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
+    background-position: center;
+    background-size: 100% 310%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 29%;
+}
+
+.title h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.logbutton {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logbutton button {
+    width: 20%;
+    border-radius: 10px;
+}
+
+.logbutton b {
+    text-align: center;
+}
+
+.heading {
+    padding-left: 15px;
+}
+
+hr {
+    width: 93%;
+    background-color: rgba(204, 204, 203, 0.958);
+    border: 1px solid rgba(220, 220, 218, 0.958);
+}
+
+.login {
+    padding: 2.5%;
+    font-size: large;
+    border-radius: 5px;
+}
+
+
+.forgetpass:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Full-width input fields */
+
+label input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#id01 .modal-content {
+    margin-top: 8%;
+    padding-bottom: 20px;
+}
+
+
+
+/* Set a style for all buttons */
+
+button {
+    background-color: orange;
+    color: white;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    float: right;
+    margin-top: 1%;
+    margin-right: 3%;
+    width: fit-content;
+    background: none;
+}
+
+.container {
+    padding: 16px;
+}
+
+.register p {
+    color: blueviolet;
+    font-size: medium;
+}
+
+.register p:hover {
+    text-decoration: underline;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5.7% auto;
+    /* 5% from the top, centered */
+    border: 1px solid;
+    width: 30%;
+    /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.fa-close {
+    color: white;
+}
+
+.register {
+    background: none;
+    border: none;
+    color: black;
+    width: fit-content;
+    padding: 8px;
+}
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+
+#message {
+    display: none;
+}

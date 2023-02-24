@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rainfall Prediction</title>
+  <link rel="stylesheet" href="/static/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="title">
+    <h1>Rainfall prediction</h1>
+    <div class="logbutton">
+      <button onclick="document.getElementById('id01').style.display = 'block'"><b>Login</b></button>
+      <button onclick="document.getElementById('id02').style.display = 'block'"><b>Signup</b></button>
+    </div>
+
+  </div>
+
+  <input type="text" value="{{ msg }}" id="message">
+
+  <!-- login side -->
+
+  <div id="id01" class="modal">
+
+    <button onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">
+      <span class="fa fa-close fa-2x"></span>
+    </button>
+
+    <div class="modal-content animate" method="post">
+
+      <h1 class="heading">Login</h1>
+
+      <hr>
+
+      <form class="container" name="login" action="/login" method="post">
+
+        <label for="email"><b>Email</b>
+          <input type="email" placeholder="Enter email" name="lemail" id="lemail" required>
+        </label>
+
+        <br><br>
+
+        <label for="psw"><b>Password</b>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        </label>
+
+        <br><br>
+
+
+        <input type="checkbox" checked="checked" name="remember"><span>Remember me</span>
+
+        <br><br>
+
+        <button type="submit" class="login">Login</button>
+
+        <br>
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+  <!-- Sign Up side  -->
+
+  <div id="id02" class="modal">
+
+    <button onclick="document.getElementById('id02').style.display = 'none'" class="cancelbtn">
+      <span class="fa fa-close fa-2x"></span>
+    </button>
+
+    <div class="modal-content animate" method="post">
+
+      <h1 class="heading">Signup</h1>
+
+      <hr>
+
+      <form class="container" name="signup" action="/addhome" method="post" onsubmit="return validateForm('Ok')">
+
+        <label for="name"><b>Name</b>
+          <input type="text" placeholder="Enter Name" name="uname" onkeydown="return /([a-z]|\s)/i.test(event.key)"
+            required>
+        </label>
+
+        <br><br>
+
+        <label for="Email"><b>Email</b>
+          <input type="email" placeholder="Enter Email" name="Email" required>
+        </label>
+
+        <br><br>
+
+        <label for="psw"><b>Password</b>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </label>
+
+        <br><br>
+
+        <button type="submit" class="login">Register</button>
+
+      </form>
+
+      <center>
+
+        <span class="text">Already have an account?
+          <button class="register" onclick="displayid02()">
+            <p>Login</p>
+          </button>
+        </span>
+
+      </center>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function displayid01() {
+      document.getElementById('id01').style.display = 'none'
+
+      document.getElementById('id02').style.display = 'block'
+    }
+
+    function displayid02() {
+      document.getElementById('id01').style.display = 'block'
+
+      document.getElementById('id02').style.display = 'none'
+    }
+
+    function validateForm() {
+      const form = document.forms['signup']
+      const password = form['psw'].value
+      var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+      if (regularExpression.test(password)) {
+        return true;
+      } else {
+        alert(`${password} Password is invalid`)
+        return false;
+      }
+    }
+
+
+    var data_alert = document.getElementById('message').value;
+
+    if (data_alert != "") {
+      alert(data_alert);
+    }
+
+  </script>
+
+  <!-- for pass alert -->
+  <script>
+    var pass = "";
+    pass = "{{passs}}"
+
+    if (pass != "") {
+      alert(pass);
+    }
+
+  </script>
+
+</body>
+
+</html>
